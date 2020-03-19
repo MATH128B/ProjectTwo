@@ -28,7 +28,7 @@ for i=1:length(input)
     error = output - train(i);  % difference between output and target 
                                 % output
     delta = output .* (1 - output) .* error; % modified error
-    updatedweight = eta * out{layers-1}' * delta; % iterated weight update 
+    updatedweight = out{layers-1}' * delta; % iterated weight update 
                                                   % based on delta
     weight(layers) = weight(layers) - updatedweight;
     
