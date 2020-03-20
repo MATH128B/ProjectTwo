@@ -19,8 +19,8 @@ T(9,:) = mean(train8);
 T(10,:) = mean(train9);
 
 for j = 1:10
-    subplot(2,5,j);
-    i = T(j,:);
+    subplot(2,5,j);    %create 2x5 plot of 10 digits
+    i = T(j,:);        %loop through each T defined above
     digitImage = reshape(i, 28, 28); %big I
     image(rot90(flipud(digitImage),-1));
     colormap(gray(256)), axis square tight off
